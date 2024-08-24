@@ -71,9 +71,14 @@
         <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <button id="how-to-play-button">How to Play</button>
             <div>Round: <span id="round-number">0</span></div>
-            <div>Press Higher or Lower to submit your guess!</div>
+            <div id="results-box">Press Higher or Lower to submit your guess!</div>
             <div class="container-fluid">
                 <div class="row justify-content-center text-center">
+                    <div class="col-2">
+                        <div id="card0">
+                            ?
+                        </div>
+                    </div>
                     <div class="col-2">
                         <div id="card1">
                             ?
@@ -94,11 +99,6 @@
                             ?
                         </div>
                     </div>
-                    <div class="col-2">
-                        <div id="card5">
-                            ?
-                        </div>
-                    </div>
                 </div>
             </div>
             <div class="row">
@@ -112,8 +112,8 @@
             <button id="reset-game-button">Reset Game</button>
         </section>
         <section id="results-page" class="hide d-flex flex-column justify-content-center align-items-center">
-            <h1>Congrats You Won!/Better Luck Next Time!</h1>
-            <button>Play Again</button>
+            <h1 id="results-page-message">Congrats You Won!/Better Luck Next Time!</h1>
+            <button id="play-again-button">Play Again</button>
         </section>
     </main>
     <footer>
