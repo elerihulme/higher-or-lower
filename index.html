@@ -70,32 +70,32 @@
         </section>
         <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <button id="how-to-play-button">How to Play</button>
-            <div>Round: 0</div>
+            <div>Round: <span id="round-number">0</span></div>
             <div>Press Higher or Lower to submit your guess!</div>
             <div class="container-fluid">
                 <div class="row justify-content-center text-center">
                     <div class="col-2">
-                        <div>
+                        <div id="card1">
                             ?
                         </div>
                     </div>
                     <div class="col-2">
-                        <div>
+                        <div id="card2">
                             ?
                         </div>
                     </div>
                     <div class="col-2">
-                        <div>
+                        <div id="card3">
                             ?
                         </div>
                     </div>
                     <div class="col-2">
-                        <div>
+                        <div id="card4">
                             ?
                         </div>
                     </div>
                     <div class="col-2">
-                        <div>
+                        <div id="card5">
                             ?
                         </div>
                     </div>
@@ -103,13 +103,13 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button>Higher</button>
+                    <button id="higher-button">Higher</button>
                 </div>
                 <div class="col">
-                    <button>Lower</button>
+                    <button id="lower-button">Lower</button>
                 </div>
             </div>
-            <button>Reset Game</button>
+            <button id="reset-game-button">Reset Game</button>
         </section>
         <section id="results-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <h1>Congrats You Won!/Better Luck Next Time!</h1>
