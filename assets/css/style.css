@@ -5,3 +5,9 @@ section {
 .hide.d-flex {
     display: none !important;
 }
+
+.col-2 {
+    border: 1px solid black;
+    height: 150px;
+    font-size: 40px;
+}

@@ -20,8 +20,8 @@
         <h1>Higher or Lower?</h1>
     </header>
     <main>
-        <section class="hide d-flex flex-column justify-content-center align-items-center">
-            <button>Start Game</button>
+        <section id="start-page" class="d-flex flex-column justify-content-center align-items-center">
+            <button id="start-game-button">Start Game</button>
             <h2>Objective:</h2>
             <p>The goal of the game is to correctly guess whether the next card drawn will be higher or lower than the
                 current card. If you successfully guess through 5 cards, you win the game. However, if you guess
@@ -68,36 +68,50 @@
             <p>If you make an incorrect guess at any point, the game will display a "You Lose!" message, and the cards
                 will reset. You must start from the first card again.</p>
         </section>
-        <section class="hide">
-            <button>How to Play</button>
+        <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center">
+            <button id="how-to-play-button">How to Play</button>
             <div>Round: 0</div>
             <div>Press Higher or Lower to submit your guess!</div>
             <div class="container-fluid">
-                <div class="row">
+                <div class="row justify-content-center text-center">
                     <div class="col-2">
-                        ?
+                        <div>
+                            ?
+                        </div>
                     </div>
                     <div class="col-2">
-                        ?
+                        <div>
+                            ?
+                        </div>
                     </div>
                     <div class="col-2">
-                        ?
+                        <div>
+                            ?
+                        </div>
                     </div>
                     <div class="col-2">
-                        ?
+                        <div>
+                            ?
+                        </div>
                     </div>
                     <div class="col-2">
-                        ?
+                        <div>
+                            ?
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <button class="col-2">Higher</button>
-                <button class="col-2">Lower</button>
+                <div class="col">
+                    <button>Higher</button>
+                </div>
+                <div class="col">
+                    <button>Lower</button>
+                </div>
             </div>
             <button>Reset Game</button>
         </section>
-        <section class="">
+        <section id="results-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <h1>Congrats You Won!/Better Luck Next Time!</h1>
             <button>Play Again</button>
         </section>
