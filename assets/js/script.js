@@ -3,6 +3,7 @@ let game = {
     round: 0,
     currentCard: 0,
     previousCard: 0,
+    gameStatus: "active"
 };
 
 $(document).ready(function () {
@@ -17,7 +18,7 @@ $(document).ready(function () {
         $('#game-page').addClass('hide');
     });
 
-    $('#reset-game-button').click(function () {
+    $('#modal-reset-game-button').click(function () {
         newGame();
     });
 
@@ -36,7 +37,7 @@ $(document).ready(function () {
     });
 
     $('#play-again-button').click(function () {
-        $('#start-page').addClass('hide');
+        $('#results-page').addClass('hide');
         $('#game-page').removeClass('hide');
         newGame();
     });
@@ -45,17 +46,23 @@ $(document).ready(function () {
 function newGame() {
     game.cards = [];
     game.round = 0;
+    $('#results-box').text('Press Higher or Lower to submit your guess!');
+
+    for (i = 1; i < 5; i++) {
+        $(`#card${i}`).text("?");
+    }
 
     while (game.cards.length < 5) {
         let card = ((Math.floor(Math.random() * 16)));
         if (!game.cards.includes(card)) {
             game.cards.push(card)
+            console.log(game.cards);
         };
-        console.log(game.cards);
     };
 
     $('#card0').text(game.cards[0]);
     increaseRound();
+    game.gameStatus = "active";
 };
 
 function increaseRound() {
@@ -82,38 +89,45 @@ function checkRound() {
 }
 
 function checkGuess(userGuess) {
-    if (userGuess === 'higher') {
-        if (game.currentCard > game.previousCard) {
-            if (game.round < 4) {
-                $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
-                $(`#card${game.round}`).text(game.currentCard);
-            } else if (game.round === 4) {
-                $('#results-page').removeClass('hide');
-                $('#game-page').addClass('hide');
-                $('#results-page-message').text('Congratulations You Won ALl the Rounds!');
+    if (game.gameStatus === 'active') {
+        if (userGuess === 'higher') {
+            if (game.currentCard > game.previousCard) {
+                if (game.round < 4) {
+                    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
+                    $(`#card${game.round}`).text(game.currentCard);
+                    increaseRound();
+                } else if (game.round === 4) {
+                    $('#results-page').removeClass('hide');
+                    $('#game-page').addClass('hide');
+                    $('#results-page-message').text('Congratulations You Won All the Rounds!');
+                } else {
+                    $("#results-box").text("Invalid Round Press Reset Game");
+                }
             } else {
-                $("#results-box").text("Game over! You've completed all rounds.");
-            }
-        } else {
-            $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-            $(`#card${game.round}`).text(game.currentCard);
-        };
-    } else if (userGuess === 'lower') {
-        if (game.currentCard < game.previousCard) {
-            if (game.round < 4) {
-                $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
+                $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
                 $(`#card${game.round}`).text(game.currentCard);
-            } else if (game.round === 4) {
-                $('#results-page').removeClass('hide');
-                $('#game-page').addClass('hide');
-                $('#results-page-message').text('Congratulations You Won ALl the Rounds!');
+                game.gameStatus = "inactive";
+            };
+        } else if (userGuess === 'lower') {
+            if (game.currentCard < game.previousCard) {
+                if (game.round < 4) {
+                    $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
+                    $(`#card${game.round}`).text(game.currentCard);
+                    increaseRound();
+                } else if (game.round === 4) {
+                    $('#results-page').removeClass('hide');
+                    $('#game-page').addClass('hide');
+                    $('#results-page-message').text('Congratulations You Won All the Rounds!');
+                } else {
+                    $("#results-box").text("Invalid Round Press Reset Game");
+                }
             } else {
-                $("#results-box").text("Game over! You've completed all rounds.");
-            }
-        } else {
-            $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-            $(`#card${game.round}`).text(game.currentCard);
+                $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
+                $(`#card${game.round}`).text(game.currentCard);
+                game.gameStatus = "inactive";
+            };
         };
-    };
-
+    } else {
+        $("#results-box").text(`Press Reset Game to Play Again`);
+    }
 }

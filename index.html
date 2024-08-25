@@ -109,7 +109,33 @@
                     <button id="lower-button">Lower</button>
                 </div>
             </div>
-            <button id="reset-game-button">Reset Game</button>
+            <!-- Button trigger modal -->
+            <button type="button" id="reset-game-button" class="btn btn-primary" data-bs-toggle="modal"
+                data-bs-target="#exampleModal">
+                Reset Game
+            </button>
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Are You Sure?</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            All previous progress will be lost
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" id="modal-reset-game-button" class="btn btn-primary"
+                                data-bs-dismiss="modal">Reset
+                                Game</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
         <section id="results-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <h1 id="results-page-message">Congrats You Won!/Better Luck Next Time!</h1>
