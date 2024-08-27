@@ -1,3 +1,4 @@
+// The Game Object
 let game = {
     cards: [],
     round: 0,
@@ -5,6 +6,9 @@ let game = {
     previousCard: 0,
     gameStatus: "active"
 };
+
+// Wait for the DOM to finish loading before running the game
+// Get the button elements and add event listeners to them
 
 $(document).ready(function () {
     $('#start-game-button').click(function () {
@@ -43,13 +47,18 @@ $(document).ready(function () {
     });
 });
 
+/**
+ * The main game "loop", called when the 'start game' button is pressed
+ * and after the 'reset game' and 'play again' buttons have been pressed
+ */
+
 function newGame() {
     game.cards = [];
     game.round = 0;
     $('#results-box').text('Press Higher or Lower to submit your guess!');
 
     for (i = 1; i < 5; i++) {
-        $(`#card${i}`).text("?");
+        $(`#card${i}`).text("?").css('background-color', 'skyblue');
     }
 
     while (game.cards.length < 5) {
@@ -65,11 +74,18 @@ function newGame() {
     game.gameStatus = "active";
 };
 
+/**
+ * Gets the current round number from the DOM and increases it by one 
+ */
+
 function increaseRound() {
     game.round++
     $("#round-number").text(game.round);
 };
 
+/**
+ * Checks the round and assigns the current and previous cards that need to be compared accordingly
+ */
 function checkRound() {
     if (game.round === 1) {
         game.currentCard = game.cards[1]
@@ -88,13 +104,17 @@ function checkRound() {
     };
 }
 
+/**
+ * Checks whether the user guessed correctly
+ */
+
 function checkGuess(userGuess) {
     if (game.gameStatus === 'active') {
         if (userGuess === 'higher') {
             if (game.currentCard > game.previousCard) {
                 if (game.round < 4) {
                     $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
-                    $(`#card${game.round}`).text(game.currentCard);
+                    $(`#card${game.round}`).text(game.currentCard).css('background-color', 'limegreen');
                     increaseRound();
                 } else if (game.round === 4) {
                     $('#results-page').removeClass('hide');
@@ -105,14 +125,14 @@ function checkGuess(userGuess) {
                 }
             } else {
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-                $(`#card${game.round}`).text(game.currentCard);
+                $(`#card${game.round}`).text(game.currentCard).css('background-color', 'red');;
                 game.gameStatus = "inactive";
             };
         } else if (userGuess === 'lower') {
             if (game.currentCard < game.previousCard) {
                 if (game.round < 4) {
                     $("#results-box").text(`Correct! Round ${game.round} complete, guess again!`);
-                    $(`#card${game.round}`).text(game.currentCard);
+                    $(`#card${game.round}`).text(game.currentCard).css('background-color', 'limegreen');;
                     increaseRound();
                 } else if (game.round === 4) {
                     $('#results-page').removeClass('hide');
@@ -123,7 +143,7 @@ function checkGuess(userGuess) {
                 }
             } else {
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
-                $(`#card${game.round}`).text(game.currentCard);
+                $(`#card${game.round}`).text(game.currentCard).css('background-color', 'red');;
                 game.gameStatus = "inactive";
             };
         };
