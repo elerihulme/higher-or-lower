@@ -1,13 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+body {
+    background-color: #35a7ff;
+    color: black;
+}
+
 section {
-    border: 1px solid black;
+    margin: 20px;
 }
 
 .hide.d-flex {
     display: none !important;
 }
 
-.col-2 {
-    border: 1px solid black;
+.card {
+    border: none;
+    background-color: #35a7ff;
     height: 150px;
     font-size: 40px;
+    padding: 10px;
+}
+
+.inner-card {
+    border: 5px solid darkblue;
+    background-color: skyblue;
+    height: 80%;
+    border-radius: 10px;
+}
+
+h1 {
+    margin: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 4rem;
+    color: #F39237;
+}
+
+h2 {
+    font-family: Nunito, sans-serif;
+    text-transform: uppercase;
+}
+
+p,
+li {
+    font-family: Nunito, sans-serif;
+    margin: 0 auto;
+}
+
+button {
+    margin: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 1.75rem;
+    border-radius: 5px;
+    min-height: 80px;
+    background-color: #F39237;
+}
+
+button:hover {
+    color: #F39237;
+    background-color: black;
+}
+
+#higher-button,
+#lower-button {
+    margin: 0;
+    padding: 0;
+    width: 25%;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+#results-box {
+    min-height: 50px;
 }
