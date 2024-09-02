@@ -1,18 +1,68 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+/*------------------------------------------------------------------------ section transitioning */
+.hide {
+    display: none !important;
+}
+
+/*------------------------------------------------------------------------ general text styling and layout */
 body {
     background-color: #35a7ff;
     color: black;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 }
+
+main {
+    flex: 1 0 auto;
+}
+
 
 section {
     margin: 20px;
 }
 
-.hide.d-flex {
-    display: none !important;
+footer {
+    margin: 20px;
 }
 
+h1 {
+    margin: 20px;
+    font-family: "New Amsterdam", sans-serif;
+    font-size: 4rem;
+    color: #F39237;
+    text-shadow: 2px 2px black;
+}
+
+h2 {
+    font-family: Nunito, sans-serif;
+    text-transform: uppercase;
+}
+
+p,
+li,
+#results-box,
+#round-box,
+#scale-box {
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    margin: 0 auto;
+}
+
+a {
+    font-family: Nunito, sans-serif;
+    font-size: 1.25rem;
+    margin: 20px auto;
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    color: #F39237;
+}
+
+/*------------------------------------------------------------------------ game page */
 .card {
     border: none;
     background-color: #35a7ff;
@@ -22,36 +72,30 @@ section {
 }
 
 .inner-card {
-    border: 5px solid darkblue;
-    background-color: skyblue;
+    border: 5px solid #1f01b9;
+    background-color: #78ceeb;
     height: 80%;
     border-radius: 10px;
 }
 
-h1 {
-    margin: 20px;
-    font-family: "New Amsterdam", sans-serif;
-    font-size: 4rem;
-    color: #F39237;
+#results-box {
+    min-height: 50px;
 }
 
-h2 {
-    font-family: Nunito, sans-serif;
-    text-transform: uppercase;
+/*------------------------------------------------------------------------ modal */
+.modal-title {
+    font-size: 3rem;
 }
 
-p,
-li {
-    font-family: Nunito, sans-serif;
-    margin: 0 auto;
-}
-
+/*------------------------------------------------------------------------ buttons */
 button {
     margin: 20px;
+    padding: 0 20px;
     font-family: "New Amsterdam", sans-serif;
     font-size: 1.75rem;
     border-radius: 5px;
     min-height: 80px;
+    min-width: 10rem;
     background-color: #F39237;
 }
 
@@ -67,8 +111,4 @@ button:hover {
     width: 25%;
     min-width: 100px;
     max-width: 150px;
-}
-
-#results-box {
-    min-height: 50px;
 }
