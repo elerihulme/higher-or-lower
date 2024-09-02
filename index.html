@@ -17,7 +17,7 @@
     <!--External CSS Link-->
     <link rel="stylesheet" href="assets/css/style.css">
     <!--Favicon Link-->
-    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="assets/images/favicon.ico">
     <title>Higher or Lower?</title>
 </head>
 
@@ -37,108 +37,23 @@
             <button id="start-game-button">
                 Start Game
             </button>
-            <!--Objective-->
-            <h2>
-                Objective:
-            </h2>
-            <p class="text-center">
-                The goal of the game is to correctly guess whether the next card drawn will be higher
-                or lower than the
-                current card. If you successfully guess through 5 cards, you win the game. However, if you guess
-                incorrectly at any point, the game resets and you have to start over.
-            </p>
-            <!--Game Set Up-->
-            <h2>
-                Game Set Up:
-            </h2>
-            <ol>
-                <li>
-                    The game starts with a single card displayed on the screen.
-                </li>
-                <li>
-                    Four additional card slots are shown, but they are initially hidden (displayed as ?).
-                </li>
-            </ol>
-            <!--How To Play-->
-            <h2>
-                How to Play:
-            </h2>
-            <ol>
-                <!--Instruction 1-->
-                <li>
-                    Start the Game: When the game begins, you'll see the first card (e.g., a 7). The next card is
-                    hidden.
-                </li>
-                <!--Instruction 2-->
-                <li>
-                    Make a guess:
-                    <ul>
-                        <li>
-                            You have two buttons: "Higher" and "Lower".
-                        </li>
-                        <li>
-                            Based on the value of the current card, you must guess whether the next card drawn will be
-                            higher or lower in value.
-                        </li>
-                    </ul>
-                </li>
-                <!--Instruction 3-->
-                <li>
-                    Reveal the Next Card:
-                    <ul>
-                        <li>
-                            After making your guess, the next card is revealed.
-                        </li>
-                        <li>
-                            If your guess is correct (e.g., the next card is indeed higher if you guessed "Higher"), you
-                            move on to the next round.
-                        <li>
-                        <li>
-                            If your guess is incorrect, the game ends, and all cards reset to ?. You must start over
-                            from the first card.
-                        </li>
-                    </ul>
-                </li>
-                <!--Instruction 4-->
-                <li>
-                    Continue Guessing:
-                    <ul>
-                        <li>
-                            Repeat the guessing process for the remaining cards. You need to guess correctly for each
-                            new card drawn.
-                        </li>
-                        <li>
-                            The game keeps track of your progress through the 5 cards.
-                        <li>
-                    </ul>
-                </li>
-            </ol>
-            <!--Winning Conditions-->
-            <h2>
-                Winning the Game:
-            </h2>
-            <p>
-                If you successfully guess correctly for all 5 cards, you win the game! A message will be displayed, and
-                the game will reset to allow you to play again.
-            </p>
-            <!--Losing Conditions-->
-            <h2>
-                Losing the Game:
-            </h2>
-            <p>
-                If you make an incorrect guess at any point, the game will display a "You Lose!" message, and the cards
-                will reset. You must start from the first card again.
-            </p>
+            <!--How To Play Button To Trigger Modal -->
+            <button id="how-to-play-button" data-bs-toggle="modal" data-bs-target="#howToPlayModal">
+                How To Play
+            </button>
         </section>
         <!--Game Play Section-->
         <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center text-center">
             <!--How To Play Button-->
-            <button id="how-to-play-button">
-                How to Play
+            <button id="how-to-play-button" data-bs-toggle="modal" data-bs-target="#howToPlayModal">
+                How To Play
             </button>
             <!--Round Score-->
-            <div>
+            <div id="round-box">
                 Round: <span id="round-number">0</span>
+            </div>
+            <div id="scale-box">
+                The cards range from 0-15
             </div>
             <!--Results Box-->
             <div id="results-box">
@@ -149,31 +64,31 @@
                 <div class="row justify-content-center text-center">
                     <!--Card 1-->
                     <div class="card col-6 col-md-2 d-flex justify-content-center">
-                        <div id="card0" class="inner-card d-flex justify-content-center align-items-center">
+                        <div id="card-0" class="inner-card d-flex justify-content-center align-items-center">
                             ?
                         </div>
                     </div>
                     <!--Card 2-->
                     <div class="card col-6 col-md-2 d-flex justify-content-center">
-                        <div id="card1" class="inner-card d-flex justify-content-center align-items-center">
+                        <div id="card-1" class="inner-card d-flex justify-content-center align-items-center">
                             ?
                         </div>
                     </div>
                     <!--Card 3-->
                     <div class="card col-6 col-md-2 d-flex justify-content-center">
-                        <div id="card2" class="inner-card d-flex justify-content-center align-items-center">
+                        <div id="card-2" class="inner-card d-flex justify-content-center align-items-center">
                             ?
                         </div>
                     </div>
                     <!--Card 4-->
                     <div class="card col-6 col-md-2 d-flex justify-content-center">
-                        <div id="card3" class="inner-card d-flex justify-content-center align-items-center">
+                        <div id="card-3" class="inner-card d-flex justify-content-center align-items-center">
                             ?
                         </div>
                     </div>
                     <!--Card 5-->
                     <div class="card col-6 col-md-2 d-flex justify-content-center">
-                        <div id="card4" class="inner-card d-flex justify-content-center align-items-center">
+                        <div id="card-4" class="inner-card d-flex justify-content-center align-items-center">
                             ?
                         </div>
                     </div>
@@ -194,22 +109,21 @@
                     </div>
                 </div>
             </div>
-            <!--Rest Button To Trigger Modal -->
-            <button id="reset-game-button" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <!--Reset Button To Trigger Modal -->
+            <button id="reset-game-button" data-bs-toggle="modal" data-bs-target="#resetGameModal">
                 Reset Game
             </button>
-
             <!--Modal-->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            <aside class="modal fade" id="resetGameModal" tabindex="-1" aria-labelledby="reset button modal"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <!--Modal Header-->
                         <div class="modal-header">
                             <!--Modal Title-->
-                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                            <h2 class="modal-title" id="exampleModalLabel">
                                 Are You Sure?
-                            </h1>
+                            </h2>
                             <!--Modal Cross Button-->
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -229,23 +143,169 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </aside>
         </section>
         <!--Winning Page-->
         <section id="results-page" class="hide d-flex flex-column justify-content-center align-items-center">
             <!--Winning Message-->
-            <h1 id="results-page-message">
+            <h2 id="results-page-message">
                 Congrats You Won!
-            </h1>
+            </h2>
             <!--Play Again Button-->
             <button id="play-again-button">
                 Play Again
             </button>
         </section>
     </main>
+    <!--Modal-->
+    <aside class="modal fade" id="howToPlayModal" tabindex="-1" aria-labelledby="how to play button modal"
+        aria-hidden="true">
+        <div id="how-to-play-dialog" class="modal-dialog">
+            <div class="modal-content">
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <!--Modal Title-->
+                    <h2 class="modal-title" id="exampleModalLabel">
+                        Higher or Lower?
+                    </h2>
+                    <!--Modal Cross Button-->
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <!--Modal Message-->
+                <div class="modal-body">
+                    <!--Objective-->
+                    <h2>
+                        Objective:
+                    </h2>
+                    <p class="text-center">
+                        The goal of the game is to correctly guess whether the next card in the sequence will be
+                        higher
+                        or lower than the current card.
+                        If you successfully guess through the 5 cards, you win the game.
+                        However, if you guess incorrectly at any point, you must start over.
+                    </p>
+                    <!--Game Set Up-->
+                    <h2>
+                        Game Set Up:
+                    </h2>
+                    <ol>
+                        <li>
+                            The game starts with 5 cards displayed on the screen.
+                        </li>
+                        <li>
+                            The number for the first card is displayed, but the numbers of the remaining 4 four
+                            cards are
+                            initially hidden (displayed as ?).
+                        </li>
+                        <li>
+                            The numbers of the cards can be between 0 to 15 inclusive
+                        </li>
+                    </ol>
+                    <!--How To Play-->
+                    <h2>
+                        How to Play:
+                    </h2>
+                    <ol>
+                        <!--Instruction 1-->
+                        <li>
+                            Start the Game:
+                            <ul>
+                                <li>
+                                    When the game begins, you'll see the first card (e.g., a 7). The next card
+                                    is
+                                    hidden.
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Instruction 2-->
+                        <li>
+                            Make a guess:
+                            <ul>
+                                <li>
+                                    You have two buttons: "Higher" and "Lower".
+                                </li>
+                                <li>
+                                    Based on the value of the current card, you must guess whether the value of
+                                    the next card
+                                    will be
+                                    higher or lower.
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Instruction 3-->
+                        <li>
+                            Reveal the Next Card:
+                            <ul>
+                                <li>
+                                    After making your guess, the next card is revealed.
+                                </li>
+                            </ul>
+                        </li>
+                        <!--Instruction 4-->
+                        <li> One fo Two Things Will Then Happen:
+                            <div class="container-fluid">
+                                <ul>
+                                    <div class="row">
+                                        <li class="col-12 col-md-6">
+                                            <strong>If your guess is correct:</strong>
+                                            <ul>
+                                                <li>
+                                                    The card will turn green and you move on to the next round.
+                                                </li>
+                                                <li>
+                                                    Repeat the guessing process for the new card drawn.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li class="col-12 col-md-6">
+                                            <strong>If your guess is incorrect:</strong>
+                                            <ul>
+                                                <li>
+                                                    The card will turn red and the game ends there.
+                                                </li>
+                                                <li>
+                                                    If you choose to play again, new cards will be drawn and you
+                                                    must start
+                                                    again from the first card.
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </li>
+                        <!--Winning Conditions-->
+                        <h2>
+                            Winning the Game:
+                        </h2>
+                        <p>
+                            If you successfully guess correctly for all 5 cards, you win the game!
+                        </p>
+                        <!--Losing Conditions-->
+                        <h2>
+                            Losing the Game:
+                        </h2>
+                        <p>
+                            If you make an incorrect guess at any point the game stops there, but you will have
+                            the option to
+                            reset the game and try again!
+                        </p>
+                </div>
+                <div class="modal-footer">
+                    <!--Modal Close Button-->
+                    <button data-bs-dismiss="modal">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </aside>
     <!--Footer-->
-    <footer>
-
+    <footer class="text-center">
+        <a target="_blank" href="https://github.com/elerihulme"
+            aria-label="Take a look at my GitHub page for more of my work">
+            <i class="fa-brands fa-github" aria-hidden="true"></i> elerihulme
+        </a>
     </footer>
     <!--Bootstrap JavaScript Link-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
