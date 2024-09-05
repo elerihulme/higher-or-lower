@@ -84,11 +84,15 @@ a:hover {
 
 /*------------------------------------------------------------------------ modal */
 .modal-title {
-    font-size: 3rem;
+    font-size: 2rem;
+}
+
+.modal-body h2 {
+    margin: 15px 0px;
 }
 
 /*------------------------------------------------------------------------ buttons */
-button {
+.game-button {
     margin: 20px;
     padding: 0 20px;
     font-family: "New Amsterdam", sans-serif;
@@ -99,7 +103,7 @@ button {
     background-color: #F39237;
 }
 
-button:hover {
+.game-button-hover:hover {
     color: #F39237;
     background-color: black;
 }

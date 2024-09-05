@@ -71,6 +71,9 @@ function newGame() {
     $('#card-0').text(game.cards[0]);
     increaseRound();
     game.gameStatus = "active";
+    $("#higher-button").removeAttr("disabled", "disabled").addClass("game-button-hover");
+    $("#lower-button").removeAttr("disabled", "disabled").addClass("game-button-hover");
+
 };
 
 /**
@@ -127,6 +130,8 @@ function checkGuess(userGuess) {
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
                 $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');;
                 game.gameStatus = "inactive";
+                $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
+                $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
             };
         } else if (userGuess === 'lower') {
             if (game.currentCard < game.previousCard) {
@@ -145,6 +150,8 @@ function checkGuess(userGuess) {
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
                 $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');;
                 game.gameStatus = "inactive";
+                $("#higher-button").attr("disabled", "disabled").removeClass("game-button-hover");
+                $("#lower-button").attr("disabled", "disabled").removeClass("game-button-hover");
             };
         };
     } else {

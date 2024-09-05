@@ -34,18 +34,20 @@
         <!--Start Page Section-->
         <section id="start-page" class="d-flex flex-column justify-content-center align-items-center">
             <!--Start Game Button-->
-            <button id="start-game-button">
+            <button id="start-game-button" class="game-button game-button-hover">
                 Start Game
             </button>
             <!--How To Play Button To Trigger Modal -->
-            <button id="how-to-play-button" data-bs-toggle="modal" data-bs-target="#howToPlayModal">
+            <button id="how-to-play-button" class="game-button game-button-hover" data-bs-toggle="modal"
+                data-bs-target="#howToPlayModal">
                 How To Play
             </button>
         </section>
         <!--Game Play Section-->
         <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center text-center">
             <!--How To Play Button-->
-            <button id="how-to-play-button" data-bs-toggle="modal" data-bs-target="#howToPlayModal">
+            <button id="how-to-play-button" class="game-button game-button-hover" data-bs-toggle="modal"
+                data-bs-target="#howToPlayModal">
                 How To Play
             </button>
             <!--Round Score-->
@@ -53,7 +55,7 @@
                 Round: <span id="round-number">0</span>
             </div>
             <div id="scale-box">
-                The cards range from 0-15
+                The number on the cards range from 0-15
             </div>
             <!--Results Box-->
             <div id="results-box">
@@ -97,20 +99,21 @@
                 <div class="row">
                     <!--Higher Button-->
                     <div class="col justify-content-around">
-                        <button id="higher-button">
+                        <button id="higher-button" class="game-button game-button-hover">
                             Higher
                         </button>
                     </div>
                     <!--Lower Button-->
                     <div class="col justify-content-around">
-                        <button id="lower-button">
+                        <button id="lower-button" class="game-button game-button-hover">
                             Lower
                         </button>
                     </div>
                 </div>
             </div>
             <!--Reset Button To Trigger Modal -->
-            <button id="reset-game-button" data-bs-toggle="modal" data-bs-target="#resetGameModal">
+            <button id="reset-game-button" class="game-button game-button-hover" data-bs-toggle="modal"
+                data-bs-target="#resetGameModal">
                 Reset Game
             </button>
             <!--Modal-->
@@ -121,9 +124,9 @@
                         <!--Modal Header-->
                         <div class="modal-header">
                             <!--Modal Title-->
-                            <h2 class="modal-title" id="exampleModalLabel">
+                            <h3 class="modal-title" id="exampleModalLabel">
                                 Are You Sure?
-                            </h2>
+                            </h3>
                             <!--Modal Cross Button-->
                             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
@@ -133,11 +136,12 @@
                         </div>
                         <div class="modal-footer">
                             <!--Modal Close Button-->
-                            <button data-bs-dismiss="modal">
+                            <button data-bs-dismiss="modal" class="game-button game-button-hover">
                                 Close
                             </button>
                             <!--Modal Reset Button-->
-                            <button id="modal-reset-game-button" data-bs-dismiss="modal">
+                            <button id="modal-reset-game-button" data-bs-dismiss="modal"
+                                class="game-button game-button-hover">
                                 Reset Game
                             </button>
                         </div>
@@ -152,7 +156,7 @@
                 Congrats You Won!
             </h2>
             <!--Play Again Button-->
-            <button id="play-again-button">
+            <button id="play-again-button" class="game-button game-button-hover">
                 Play Again
             </button>
         </section>
@@ -169,7 +173,8 @@
                         Higher or Lower?
                     </h2>
                     <!--Modal Cross Button-->
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <button type="button" id="modal-cross" class="btn-close" data-bs-dismiss="modal"
+                        aria-label="Close"></button>
                 </div>
                 <!--Modal Message-->
                 <div class="modal-body">
@@ -243,57 +248,54 @@
                         </li>
                         <!--Instruction 4-->
                         <li> One fo Two Things Will Then Happen:
-                            <div class="container-fluid">
-                                <ul>
-                                    <div class="row">
-                                        <li class="col-12 col-md-6">
-                                            <strong>If your guess is correct:</strong>
-                                            <ul>
-                                                <li>
-                                                    The card will turn green and you move on to the next round.
-                                                </li>
-                                                <li>
-                                                    Repeat the guessing process for the new card drawn.
-                                                </li>
-                                            </ul>
+                            <ul>
+                                <li>
+                                    <strong>If your guess is correct:</strong>
+                                    <ul>
+                                        <li>
+                                            The card will turn green and you move on to the next round.
                                         </li>
-                                        <li class="col-12 col-md-6">
-                                            <strong>If your guess is incorrect:</strong>
-                                            <ul>
-                                                <li>
-                                                    The card will turn red and the game ends there.
-                                                </li>
-                                                <li>
-                                                    If you choose to play again, new cards will be drawn and you
-                                                    must start
-                                                    again from the first card.
-                                                </li>
-                                            </ul>
+                                        <li>
+                                            Repeat the guessing process for the new card drawn.
                                         </li>
-                                    </div>
-                                </ul>
-                            </div>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <strong>If your guess is incorrect:</strong>
+                                    <ul>
+                                        <li>
+                                            The card will turn red and the game ends there.
+                                        </li>
+                                        <li>
+                                            If you choose to play again, new cards will be drawn and you
+                                            must start
+                                            again from the first card.
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
                         </li>
-                        <!--Winning Conditions-->
-                        <h2>
-                            Winning the Game:
-                        </h2>
-                        <p>
-                            If you successfully guess correctly for all 5 cards, you win the game!
-                        </p>
-                        <!--Losing Conditions-->
-                        <h2>
-                            Losing the Game:
-                        </h2>
-                        <p>
-                            If you make an incorrect guess at any point the game stops there, but you will have
-                            the option to
-                            reset the game and try again!
-                        </p>
+                    </ol>
+                    <!--Winning Conditions-->
+                    <h2>
+                        Winning the Game:
+                    </h2>
+                    <p>
+                        If you successfully guess correctly for all 5 cards, you win the game!
+                    </p>
+                    <!--Losing Conditions-->
+                    <h2>
+                        Losing the Game:
+                    </h2>
+                    <p>
+                        If you make an incorrect guess at any point the game stops there, but you will have
+                        the option to
+                        reset the game and try again!
+                    </p>
                 </div>
                 <div class="modal-footer">
                     <!--Modal Close Button-->
-                    <button data-bs-dismiss="modal">
+                    <button data-bs-dismiss="modal" class="game-button game-button-hover">
                         Close
                     </button>
                 </div>
