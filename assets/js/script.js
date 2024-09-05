@@ -115,7 +115,6 @@ function checkGuess(userGuess) {
                 } else if (game.round === 4) {
                     $('#results-page').removeClass('hide');
                     $('#game-page').addClass('hide');
-                    $('#results-page-message').text('Congratulations You Won All the Rounds!');
                 } else {
                     $("#results-box").text("Invalid Round Press Reset Game");
                 }
@@ -135,7 +134,6 @@ function checkGuess(userGuess) {
                 } else if (game.round === 4) {
                     $('#results-page').removeClass('hide');
                     $('#game-page').addClass('hide');
-                    $('#results-page-message').text('Congratulations You Won All the Rounds!');
                 } else {
                     $("#results-box").text("Invalid Round Press Reset Game");
                 }
