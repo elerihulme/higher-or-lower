@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-/*------------------------------------------------------------------------ section transitioning */
-.hide {
-    display: none !important;
-}
-
 /*------------------------------------------------------------------------ general text styling and layout */
 body {
     background-color: #35a7ff;
@@ -60,6 +55,12 @@ a {
 
 a:hover {
     color: #F39237;
+    text-shadow: 2px 2px black;
+}
+
+/*------------------------------------------------------------------------ section navigation */
+.hide {
+    display: none !important;
 }
 
 /*------------------------------------------------------------------------ game page */

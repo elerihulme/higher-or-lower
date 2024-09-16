@@ -39,14 +39,14 @@
             </button>
             <!--How To Play Button To Trigger Modal -->
             <button id="how-to-play-button" class="game-button game-button-hover" data-bs-toggle="modal"
-                data-bs-target=".howToPlayModal">
+                data-bs-target="#how-to-play-modal">
                 How To Play
             </button>
         </section>
         <!--Game Play Section-->
         <section id="game-page" class="hide d-flex flex-column justify-content-center align-items-center text-center">
             <!--How To Play Button-->
-            <button class="game-button game-button-hover" data-bs-toggle="modal" data-bs-target=".howToPlayModal">
+            <button class="game-button game-button-hover" data-bs-toggle="modal" data-bs-target="#how-to-play-modal">
                 How To Play
             </button>
             <!--Round Score-->
@@ -112,11 +112,11 @@
             </div>
             <!--Reset Button To Trigger Modal -->
             <button id="reset-game-button" class="game-button game-button-hover" data-bs-toggle="modal"
-                data-bs-target="#resetGameModal">
+                data-bs-target="#reset-game-modal">
                 Reset Game
             </button>
             <!--Modal-->
-            <aside class="modal fade" id="resetGameModal" tabindex="-1" aria-labelledby="reset-game-button"
+            <aside class="modal fade" id="reset-game-modal" tabindex="-1" aria-labelledby="reset-game-button"
                 aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -162,7 +162,8 @@
         </section>
     </main>
     <!--Modal-->
-    <aside class="modal fade howToPlayModal" tabindex="-1" aria-labelledby="how-to-play-button" aria-hidden="true">
+    <aside id="how-to-play-modal" class="modal fade" tabindex="-1" aria-labelledby="how-to-play-button"
+        aria-hidden="true">
         <div id="how-to-play-dialog" class="modal-dialog">
             <div class="modal-content">
                 <!--Modal Header-->
@@ -182,8 +183,7 @@
                         Objective:
                     </h2>
                     <p class="text-center">
-                        The goal of the game is to correctly guess whether the next card in the sequence will be
-                        higher
+                        The goal of the game is to correctly guess whether the next card in the sequence will be higher
                         or lower than the current card.
                         If you successfully guess through the 5 cards, you win the game.
                         However, if you guess incorrectly at any point, you must start over.
@@ -199,7 +199,7 @@
                         <li>
                             The number for the first card is displayed, but the numbers of the remaining 4 four
                             cards are
-                            initially hidden (displayed as ?).
+                            initially hidden (displayed as '?').
                         </li>
                         <li>
                             The numbers of the cards can be between 0 to 15 inclusive

@@ -125,7 +125,8 @@ function checkGuess(userGuess) {
                     $("#results-box").text("Invalid Round Press Reset Game");
                 }
             } else {
-                //changes the card to red and tells the user their guess was incorrect, changes the game status to inactive to prevent further guess and disables the higher and lower buttons
+                /*changes the card to red and tells the user their guess was incorrect, changes the game status to inactive 
+                to prevent further guess and disables the higher and lower buttons*/
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
                 $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
                 game.gameStatus = "inactive";
@@ -149,7 +150,8 @@ function checkGuess(userGuess) {
                     $("#results-box").text("Invalid Round Press Reset Game");
                 }
             } else {
-                //changes the card to red and tells the user their guess was incorrect, changes the game status to inactive to prevent further guess and disables the higher and lower buttons
+                //changes the card to red and tells the user their guess was incorrect, changes the game status to inactive 
+                /*to prevent further guess and disables the higher and lower buttons*/
                 $("#results-box").text("Incorrect! Press the 'Reset Game' to play again!");
                 $(`#card-${game.round}`).text(game.currentCard).css('background-color', 'red');
                 game.gameStatus = "inactive";

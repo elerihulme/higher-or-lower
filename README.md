@@ -5,7 +5,7 @@ The purpose is to have fun trying to complete all 4 rounds.
 
 The site can be accessed from this [link](https://elerihulme.github.io/higher-or-lower/)
 
-![Responsive Mock Up](assets/images/mock-up.png)
+![Responsive Mock Up](documentation/mock-up.png)
 
 ## Overview
 
@@ -17,21 +17,21 @@ The higher or lower game consists of one html page but has three sections that a
 
 ## Technologies Used
 
-- **HTML**: Structure of the website.
-- **CSS**: Styling and layout.
-- **JavaScript**: Interactivity.
-- **Markdown**: Create README.md
-- **JQuery**: Interactivity.
-- **Bootstrap**: Responsive layouts.
-- **Balsamiq**: Make wireframes.
-- **Miro**: Workflow creation.
+- **HTML**: Langauge used to provide structure of the website.
+- **CSS**: Language used to provide styling and layout to the website.
+- **JavaScript**: Language used to provide interactivity to the website.
+- **Markdown**: Langauge used to write README.md
+- **JQuery**: Framework that provides convenient tools to handle events and DOM manipulation.
+- **Bootstrap**: Framework for building responsive pre-desgined layouts and interactive features.
+- **Balsamiq**: Tool for creating wireframes
+- **Miro**: Tool for workflow creation.
 - **GitPod**: Main tool to write and edit code.
-- **Git**: Version control.
-- **GitHub**: Host the code of the website.
-- **GitHub Pages**: Website deployment.
-- **Google Chrome Developer Tools**: Website troubleshooting and testing.
-- **Google Fonts**: For all fonts used.
-- **FontAwesome**: All icons used.
+- **Git**: System for version control.
+- **GitHub**: Platform that hosts the code of the website.
+- **GitHub Pages**: Service used for website deployment.
+- **Google Chrome Developer Tools**: Tool used for website troubleshooting and testing.
+- **Google Fonts**: Library used for all fonts used.
+- **FontAwesome**: Library used for all icons used.
 
 ## User Experience Design
 
@@ -68,21 +68,21 @@ The higher or lower game consists of one html page but has three sections that a
 * The website conisits of one html page with different sections visible at different times to keep the website size smaller and increase loading speed.
 * The website has it's own custom favicon, making the site look more professional and helping the user to find the correct page if they have several tabs open in their browser
 
-![Favicon screen shot](assets/images/favicon.png)
+![Favicon screen shot](documentation/favicon.png)
 
 ##### Header
 
-![Header desktop screen shot](assets/images/header-desktop.png)
+![Header desktop screen shot](documentation/header-desktop.png)
 
 * The header is always visible on the webpage to provide consistnecy throughout the game.
 * The header consists of the game title "Higher or Lower ?" 
 * The header is responsive. When on a small screen the title extends over two lines instead of one
 
-![Header mobile screen shot](assets/images/header-mobile.png)
+![Header mobile screen shot](documentation/header-mobile.png)
 
 ##### Footer
 
-![Footer desktop screen shot](assets/images/footer-desktop.png)
+![Footer desktop screen shot](documentation/footer-desktop.png)
 
 * The footer is always visible on the webpage to provide consistency throughout the game.
 * The footer consists of the GitHub logo and my GitHub user game and is a link to my GitHub page.
@@ -90,11 +90,11 @@ The higher or lower game consists of one html page but has three sections that a
 * The link opens in a new tab so the user doesn't have any issues finding the game again.
 * The footer content already compatible with all device sizes as the content is minimal and easily fits the width of all standard screen sizes. 
 
-![Footer mobile screen shot](assets/images/footer-mobile.png)
+![Footer mobile screen shot](documentation/footer-mobile.png)
 
 ##### Start Section
 
-![Start section desktop screen shot](assets/images/start-section-desktop.png)
+![Start section desktop screen shot](documentation/start-section-desktop.png)
 
 * The start section consists of two buttons: 
  - 'Start Game': which takes the user to the game section .
@@ -102,11 +102,11 @@ The higher or lower game consists of one html page but has three sections that a
 * This gives the user two options: to start playing the game straight away, or to learn how to play the game first.
 * The start sections is compatible with all screen sizes as the button are positioned one on top of the other. They are not too wide to fit inside the width of a mobile device, and are not to too tall or spaced out so they are both visible in the device viewport together.
 
-![Start section mobile screen shot](assets/images/start-section-mobile.png)
+![Start section mobile screen shot](documentation/start-section-mobile.png)
 
 ##### Game Section
 
-![Game section desktop screen shot](assets/images/game-section-desktop.png)
+![Game section desktop screen shot](documentation/game-section-desktop.png)
 
 * The game section consists of:
  - 'How To Play Button"
@@ -120,11 +120,11 @@ The higher or lower game consists of one html page but has three sections that a
 * Initally only the first card has a number shown, the others are all marked with a '?', and the numbers get revealled one by one as the user makes guesses, adn the background turns from blue to either green or red to indicate to the user whether their guess was correct or incorrect.
 * All buttons have a hover effect to ensure the user knows that they are interactive and clickable. However, the higher and lower buttons are diabled and the hover effect removed when the user guesses incorrectly, to show that the game is over.
 
-![Game play screen shot](assets/images/game-play.png)
+![Game play screen shot](documentation/game-play.png)
 
  * The game section is responsive as the cards move to form three lines inside of one when on a mobile device.
 
-![Game section mobile screen shot](assets/images/game-section-mobile.png)
+![Game section mobile screen shot](documentation/game-section-mobile.png)
 
 ##### Results Section
 
@@ -136,7 +136,7 @@ Results section screen shot
 
 ##### How To Play Modal
 
-![How to play modal desktop screen shot](assets/images/how-to-play-modal-desktop.png)
+![How to play modal desktop screen shot](documentation/how-to-play-modal-dektop.png)
 
 * The How To Play' modal provides the rules and objectives of the game without taking the user away from the screen they are currrently on, so they do not have to restart the game if they are in the middle of playing. 
 * The 'How To Play' modal consists of:
@@ -147,13 +147,13 @@ Results section screen shot
  - The winning and losing conditions of the game which outlines how the user wins and loses the game.
  - A modal footer containing a 'close' button so the user can exit the modal from the bottom of the modal.
 
-![How to play modal mobile screen shot](assets/images/how-to-play-modal-mobile-1.png)
-![How to play modal mobile screen shot](assets/images/how-to-play-modal-mobile-2.png)
-![How to play modal mobile screen shot](assets/images/how-to-play-modal-mobile-3.png)
+![How to play modal mobile screen shot](documentation/how-to-play-modal-mobile-1.png)
+![How to play modal mobile screen shot](documentation/how-to-play-modal-mobile-2.png)
+![How to play modal mobile screen shot](documentation/how-to-play-modal-mobile-3.png)
 
 ##### Reset Game Modal
 
-![Reset game modal desktop screen shot](assets/images/reset-game-modal-desktop.png)
+![Reset game modal desktop screen shot](documentation/reset-game-modal-desktop.png)
 
 * The reset game modal is to double check that the user understands what happens when they reset the game to ensure that they don't lose their progress if that wasn't what they intended to do.
 * The 'Reset Game' modal consists of:
@@ -161,7 +161,7 @@ Results section screen shot
  - A line of text in the modal boday informing the user that all their progress will be lost if they reset the game.
  - A modal footer with a 'close' button, so the user can close the modal and return to their game from the bottom of the modal, and a 'reset game' button so the user can continue and reset the game if that is what they wish to do.
 
- ![Reset game modal mobile screen shot](assets/images/reset-game-modal-mobile.png)
+ ![Reset game modal mobile screen shot](documentation/reset-game-modal-mobile.png)
  
  #### Future Features
 
@@ -173,7 +173,7 @@ Results section screen shot
 
 This diagram shows how the user may interact and navigate through the website
 
-![User flow diagram](assets/images/flow-chart.jpg)
+![User flow diagram](documentation/flow-chart.jpg)
 
 ### Skeleton
 
@@ -181,23 +181,23 @@ This diagram shows how the user may interact and navigate through the website
 
 ##### Mobile
 
-- ![Start Section. Mobile Screen](assets/images/start-page-mobile.png)
-- ![How To Play Modal. Mobile Screen](assets/images/how-to-play-mobile.png)
-- ![Game Section. Mobile Screen](assets/images/game-page-mobile.png)
-- ![Results Section. Mobile Screen](assets/images/results-mobile.png)
+- ![Start Section. Mobile Screen](documentation/start-page-mobile.png)
+- ![How To Play Modal. Mobile Screen](documentation/how-to-play-mobile.png)
+- ![Game Section. Mobile Screen](documentation/game-page-mobile.png)
+- ![Results Section. Mobile Screen](documentation/results-mobile.png)
 
 ##### Desktop
 
-- ![Start Section. Desktop Screen](assets/images/start-page-desktop.png)
-- ![How To Play Modal. Desktop Screen](assets/images/how-to-play-desktop.png)
-- ![Game Section. Desktop Screen](assets/images/game-page-desktop.png)
-- ![Results Section. Desktop Screen](assets/images/results-desktop.png)
+- ![Start Section. Desktop Screen](documentation/start-page-desktop.png)
+- ![How To Play Modal. Desktop Screen](documentation/how-to-play-desktop.png)
+- ![Game Section. Desktop Screen](documentation/game-page-desktop.png)
+- ![Results Section. Desktop Screen](documentation/results-desktop.png)
 
 ### Surface
 
 #### Colours
 
-![Color pallet](assets/images/higher-or-lower-colour-palette.png)
+![Color pallet](documentation/higher-or-lower-colour-palette.png)
 
 - The main theme colours were Argentinian Blue (#35A7FF) and Carrot Orange (#F39237) to create a loud and bright colour scheme to make the game look exciting and engaging to the user.
 - Dark Blue (#1F01B9) was then used as border for each card to clearly define each card.
@@ -205,11 +205,11 @@ This diagram shows how the user may interact and navigate through the website
 
 #### Typography
 
-![New Amsterdam Font](assets/images/new-amsterdam.png)
+![New Amsterdam Font](documentation/new-amsterdam.png)
 
 - Google font's 'New Amsterdam' was used for the headings and buttons as the block capitals look similar to the fonts used in retro games, making the website look instantly like a game so the user may quickly have a sense of the webpage's purpose.
 
-![Nunito Font](assets/images/nunito.png)
+![Nunito Font](documentation/nunito.png)
 
 - Google font's 'Nunito' was used for any instructional text as the spacing and clarity of the letters makes the text easy to read and therefore will help the user understand any information easily.
 
@@ -222,15 +222,19 @@ The only error found was a warning that there wasn't a heading element as the di
 However, there are cases where this is acceptable, paticularly in the case of links or buttons.
 More information can be found [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 
-![html validation](assets/images/html-validator.png)
+![html validation](documentation/html-validator.png)
 
 * [CSS Validator](https://validator.w3.org/) was run on the style sheet and there were no errors found.
 
-![css validation](assets/images/css-validator.png)
+![css validation](documentation/css-validator.png)
 
-* Lighthouse in Chrome Developer Tools was used to check performance
+* Lighthouse in Chrome Developer Tools was used to check performance.
 
-![lighthouse report](assets/images/lighthouse-report.png)
+![lighthouse report](documentation/lighthouse-report.png)
+
+* [JSHint](https://jshint.com/) was run on the JavaScript code and there were no errors found.
+
+![JSHint validation](documentation/jshint-validator.png)
 
 ### Compatibility and Responsiveness
 
@@ -238,11 +242,11 @@ The website was tested on Chrome, Mozilla, Edge and Safari browsers with no prob
 
 The website was tested on numerous sized screens including different desktop, tablet and mobile devices and was found to respond as expected to all sizes.
 
-![Start section responsive](assets/images/start-section-responsive.png)
-![Game section responsive](assets/images/game-section-responsive.png)
+![Start section responsive](documentation/start-section-responsive.png)
+![Game section responsive](documentation/game-section-responsive.png)
 ![Results section responsive]()
-![How to play modal responsive](assets/images/how-to-play-modal-responsive.png)
-![Reset game modal responsive](assets/images/reset-game-modal-responsive.png)
+![How to play modal responsive](documentation/how-to-play-modal-responsive.png)
+![Reset game modal responsive](documentation/reset-game-modal-responsive.png)
 
 Chrome developer tools was used throughout the design process to check responsiveness and breakpoints. Adjustments were made accordingly.
 
@@ -256,33 +260,44 @@ Chrome developer tools was used throughout the design process to check responsiv
 | Start Section | | | | | |
 | "Start Game" button | Click on the "Start Game" button | The user is redirected to the Game section | Yes | Yes | - |
 | "How To Play" button | Click on the "How To Play" button | The "How To Play" modal appears | Yes | Yes | - |
+| Hover effect | Hover over buttons | The icon changes colour | Yes | Yes | - |
 | Game Section | | | | | |
-|  |  |  |  |  | - |
+| "How To Play" button | Click on the "How To Play" button | The "How To Play" modal appears | Yes | Yes | - |
+| "Reset Game" button | Click on the "Reset Game" button | The "Reset Game" modal appears | Yes | Yes | - |
+| "Higher" button | Click on the "Higher" button | Registers the user guess as "higher" | Yes | Yes | - |
+| "Lower" button | Click on the "Lower" button | Registers the user guess as "lower" | Yes | Yes | - |
+| Round number | User guesses correctly | The round number increases by 1 | Yes | Yes | - |
+| Number is revealed | Click "Higher" or "Lower" buttons | Card content changes from '?' to it's value | Yes | Yes | - |
+| Card changes colour | Click "Higher" or "Lower" buttons | Card background changes green or red depedning if user guessed correctly or incorrectly | Yes | Yes | - |
+| Instruction Box | Click "Higher" or "Lower" buttons | The text changes to help direct the user to their next action | Yes | Yes | - |
+| Results Section | Win all the rounds | The user is redirected to the results section | Yes | Yes | - |
 | Results Section | | | | | |
-|  |  |  |  |  | - |
+| "Play Again" button | Click on the "Play Again" button | The user is redirected to the game section | Yes | Yes | - |
 | How To Play Modal | | | | | |
-|  |  |  |  |  | - |
+| "X" button | Click on the "X" button | The modal is closed | Yes | Yes | - |
+| "Close" button | Click on the "Close" button | The modal is closed | Yes | Yes | - |
 | Reset Game Modal | | | | | |
-|  |  |  |  |  | - |
-
+| "X" button | Click on the "X" button | The modal is closed | Yes | Yes | - |
+| "Close" button | Click on the "Close" button | The modal is closed | Yes | Yes | - |
+| "Reset Game" button | Click on the "Reset Game" button | The modal closes and the game is reset | Yes | Yes | - |
 
 ### Bugs
 
 #### Solved Bugs
 
-Bug:
+Bug 1:
 When randomly selecting 5 number between 0 and 15 for the game.cards array it was possible for the same number to appear consecutively, and therefore neither higher or lower would be correct, making it impossible for the user to win.
 
 Solution:
 Instead of using a for loop which concluded after 5 iterations producing 5 numbers, a while loop was used and set to run until 5 numbers were pushed to the game.cards array and numbers were only pushed to the array if they were not already included in the array therefore no duplicate numbers would be present. In the game it makes it seem like there is only one of each card and therefore the same number could not appear twice. This  means the user always has a chance of being correct.
 
-Bug:
+Bug 2:
 When the user would guess incorrectly the game was still allowing them keep playing allowing them to change they're guess and always win.
 
 Solution:
 I added the game status key to the game object which would have the vale of either active or inactive and after an incorrect guess the game status was set to inactive the game would no longer process the user's guess meaning that they were unable to play the game until the game had been reset, setting the game status back to active.
 
-#### Unsolved Bugs
+#### Known Issues
 
 None
 
@@ -310,8 +325,12 @@ In your IDE Terminal, type the following command to clone my repository:
 - [Bootstrap](https://getbootstrap.com/) was used for content structure, navigation elements, buttons and forms.
 - [Font Awesome](https://fontawesome.com/) was used for all icons.
 - Code was taken from [Materialize](https://materializecss.com/footer.html) to push the footer to the bottom of each page regardless of the content size.
-- [Favicon] (https://favicon.io/) was used for creating and implementing the custom favicon
-- [Am I Responsive](https://ui.dev/amiresponsive) was used to create the mock up images
+- [Favicon](https://favicon.io/) was used for creating and implementing the custom favicon.
+- [Miro](https://miro.com/) was used to create the flow chart.
+- [JQuery](https://jquery.com/) was used to handle DOM manipulation and event handling.
+- [Balsamiq](https://balsamiq.com/) was used to create the wireframes.
+- [GitHub](https://github.com/) was used to store the repository.
+- [Am I Responsive](https://ui.dev/amiresponsive) was used to create the mock up images.
 - [Coolers](https://coolors.co/) was used to create the colour palette.
 - [Google Fonts](https://fonts.google.com/) was used for all fonts.
 - [Responsive Viewer](https://responsiveviewer.org/) extension was used to create images of the website's pages on a variety of devices.
