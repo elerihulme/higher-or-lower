@@ -9,21 +9,21 @@ The site can be accessed from this [link](https://elerihulme.github.io/higher-or
 
 ## Overview
 
-The higher or lower game consists of one html page but has three sections that are diplayed at different times and a modal to show the game rules:
-- **Start-Section**: has two buttons so the user can either start the game or learn how to play first
-- **Game-Section**: has the actual game
-- **Results-Section**: section displayed when the user has successfully completed all the rounds
-- **How-To-Play-Modal**: pop up modal explaining how to play the game when the 'how to play' button is pressed in either the start or game section
+The higher or lower game consists of one html page but has three sections that are diplayed at different times as well as a modal to show the game rules:
+- **Start-Section**: displays two buttons so the user can either start the game or learn how to play first.
+- **Game-Section**: displays the game itself.
+- **Results-Section**: section displayed when the user has successfully completed all the rounds.
+- **How-To-Play-Modal**: pop up modal explaining how to play the game when the 'how to play' button is pressed in either the start or game section.
 
 ## Technologies Used
 
-- **HTML**: Langauge used to provide structure of the website.
+- **HTML**: Language used to provide structure of the website.
 - **CSS**: Language used to provide styling and layout to the website.
 - **JavaScript**: Language used to provide interactivity to the website.
-- **Markdown**: Langauge used to write README.md
+- **Markdown**: Language used to write README.md.
 - **JQuery**: Framework that provides convenient tools to handle events and DOM manipulation.
 - **Bootstrap**: Framework for building responsive pre-desgined layouts and interactive features.
-- **Balsamiq**: Tool for creating wireframes
+- **Balsamiq**: Tool for creating wireframes.
 - **Miro**: Tool for workflow creation.
 - **GitPod**: Main tool to write and edit code.
 - **Git**: System for version control.
@@ -66,7 +66,7 @@ The higher or lower game consists of one html page but has three sections that a
 ##### General
 
 * The website conisits of one html page with different sections visible at different times to keep the website size smaller and increase loading speed.
-* The website has it's own custom favicon, making the site look more professional and helping the user to find the correct page if they have several tabs open in their browser
+* The website has it's own custom favicon, making the site look more professional and helping the user to find the correct page if they have several tabs open in their browser.
 
 ![Favicon screen shot](documentation/favicon.png)
 
@@ -128,11 +128,15 @@ The higher or lower game consists of one html page but has three sections that a
 
 ##### Results Section
 
-Results section screen shot
+![Results section desktop screen shot](documentation/results-desktop.png)
 
 * The results section consists of:
  - A line of text congratulating the user on completeing the game.
  - A 'Play Again' button that takes the play back to the game section and restarts the game for them to play again.
+
+* The results section is compatible with all screen sizes as the text and button adjusts to all screen sizes.
+
+![Results section mobile screen shot](documentation/results-mobile.png)
 
 ##### How To Play Modal
 
@@ -244,7 +248,6 @@ The website was tested on numerous sized screens including different desktop, ta
 
 ![Start section responsive](documentation/start-section-responsive.png)
 ![Game section responsive](documentation/game-section-responsive.png)
-![Results section responsive]()
 ![How to play modal responsive](documentation/how-to-play-modal-responsive.png)
 ![Reset game modal responsive](documentation/reset-game-modal-responsive.png)
 
